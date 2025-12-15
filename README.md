@@ -1,16 +1,39 @@
-# supabase_notes_app
+# Supabase Notes App
 
-A new Flutter project.
+## Описание
+Приложение для управления заметками с использованием Flutter и Supabase.
 
-## Getting Started
+## Установка
+1. Клонируйте репозиторий
+2. Установите зависимости: `flutter pub get`
+3. Создайте файл `.env` с ключами
+4. Запустите: `flutter run`
 
-This project is a starting point for a Flutter application.
+## Настройка Supabase
+1. Создайте проект в Supabase
+2. Создайте таблицу `notes`
+3. Включите RLS
+4. Создайте политики доступа
 
-A few resources to get you started if this is your first Flutter project:
+## Зависимости
+- supabase_flutter: ^2.1.3
+- flutter_dotenv: ^5.1.0
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Архитектура
+- main.dart: инициализация приложения
+- auth_gate.dart: экран аутентификации
+- notes_page.dart: управление заметками
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Безопасность
+- RLS политики для изоляции данных пользователей
+- Хранение ключей в .env файле
+- Валидация на стороне клиента
+
+## Решенные проблемы
+1. Ошибка "Permission denied" - исправлено настройкой RLS
+2. Реалтайм не обновлялся - добавлен primaryKey в stream()
+3. Утечки памяти - добавлена проверка mounted
+
+# Скрины
+![scr1](image.png)
+![scr1](image2.png)
